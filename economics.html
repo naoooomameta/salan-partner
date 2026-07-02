@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>収益モデルの考え方｜SALAN Education 認定パートナー募集</title>
+<meta name="description" content="SALAN認定パートナーの収益モデルの考え方。“中抜き”をしない収益設計の基本方針、パートナー収益の構造、収益を伸ばす3つのレバー。正式な条件は無料面談でご案内します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Gentium+Book+Plus:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --c-primary:#DB521F; --c-primary-dark:#A63E17;
+  --c-gold:#F0CC96; --c-brown:#846955;
+  --c-text:#202020; --c-body:#333333; --c-sub:#666666; --c-mute:#707070;
+  --c-bg:#FFFFFF; --c-grey:#F7F7F7; --c-border:#E3E3E3;
+  --serif:"Noto Serif JP",serif; --sans:"Noto Sans JP",sans-serif; --deco:"Gentium Book Plus",serif;
+  --grad:linear-gradient(-61deg,#DB521F 50%,#A63E17 0);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:16px;line-height:1.7;color:var(--c-body);background:var(--c-bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.narrow{max-width:766px}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--c-text);font-weight:700;line-height:1.42}
+.eyebrow{font-family:var(--deco);font-style:italic;font-size:15px;letter-spacing:.06em;color:var(--c-primary);display:block;margin-bottom:14px}
+.bar{width:46px;height:3px;background:var(--c-primary);margin:20px 0 22px;border:0}
+.sec-head{margin-bottom:48px}
+.sec-head h2{font-size:clamp(24px,3.6vw,30px)}
+.sec-head .lead{color:var(--c-sub);font-size:16px;margin-top:20px;line-height:1.95}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:15.5px;padding:17px 34px;border-radius:5px;text-decoration:none;cursor:pointer;border:none;transition:transform .2s ease,box-shadow .2s ease}
+.btn-primary{background-image:var(--grad);color:#fff;box-shadow:0 8px 22px -10px rgba(219,82,31,.75)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(219,82,31,.85)}
+.btn-outline{background:#fff;color:var(--c-text);border:1.5px solid var(--c-border)}
+.btn-outline:hover{border-color:var(--c-primary);color:var(--c-primary)}
+.btn .arw{font-family:var(--deco);transition:transform .2s ease}
+.btn:hover .arw{transform:translateX(3px)}
+section{padding:90px 0}
+.grey{background:var(--c-grey)}
+.tbd{display:inline-block;color:#fff;background:var(--c-primary);font-family:var(--sans);font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:.03em;white-space:nowrap;vertical-align:middle}
+
+/* header */
+.site-head{padding:22px 0;border-bottom:1px solid var(--c-border)}
+.site-head .row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.brand{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--c-text);letter-spacing:.03em;text-decoration:none}
+.brand em{font-family:var(--deco);font-style:italic;color:var(--c-primary);font-size:15px;margin-left:9px}
+.site-nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.site-nav a{font-size:13.5px;font-weight:500;color:var(--c-sub);text-decoration:none}
+.site-nav a:hover,.site-nav a.now{color:var(--c-primary)}
+.site-nav a.now{font-weight:700}
+.crumb{font-size:12.5px;color:var(--c-mute);padding:16px 0 0}
+.crumb a{color:var(--c-mute);text-decoration:none}
+.crumb a:hover{color:var(--c-primary)}
+
+/* page hero */
+.page-hero{padding:64px 0 72px}
+.page-hero h1{font-size:clamp(27px,4.6vw,42px);line-height:1.5}
+.page-hero h1 .o{color:var(--c-primary)}
+.page-hero .sub{font-size:clamp(15px,2vw,16.5px);color:var(--c-sub);line-height:2;margin-top:24px;max-width:720px}
+
+/* policy premium */
+.premium{background:var(--c-brown);border-radius:8px;padding:46px 44px;color:#F1E9DF}
+.premium .plabel{font-family:var(--deco);font-style:italic;font-size:14px;letter-spacing:.08em;color:var(--c-gold);display:block;margin-bottom:16px}
+.premium h2{font-family:var(--serif);font-weight:700;font-size:clamp(20px,3vw,27px);line-height:1.65;color:#fff}
+.premium h2 .g{color:var(--c-gold)}
+.premium p{color:#E3D6C6;font-size:15px;line-height:2;margin-top:18px;max-width:760px}
+
+/* structure flow */
+.flow{max-width:640px}
+.flow-node{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:22px 26px}
+.flow-node .fl{font-family:var(--deco);font-style:italic;font-size:13px;color:var(--c-primary);display:block;margin-bottom:6px}
+.flow-node b{font-family:var(--serif);font-weight:700;font-size:16.5px;color:var(--c-text);display:block}
+.flow-node p{color:var(--c-sub);font-size:13.5px;line-height:1.9;margin-top:8px}
+.flow-arrow{width:1px;height:24px;background:var(--c-border);margin:6px 0 6px 32px;position:relative}
+.flow-arrow::after{content:"";position:absolute;bottom:0;left:-3.5px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:6px solid var(--c-border)}
+.flow-final{border:1px solid #EBC9B4;background:#FDF6F1}
+.flow-note{max-width:640px;margin-top:24px;border-left:3px solid var(--c-primary);background:var(--c-grey);padding:20px 24px;font-size:14px;color:var(--c-sub);line-height:1.95;border-radius:0 4px 4px 0}
+.flow-note b{color:var(--c-text)}
+
+/* levers */
+.lever-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.lever{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:32px 28px}
+.lever .ln{font-family:var(--serif);font-weight:700;font-size:26px;color:var(--c-primary)}
+.lever h3{font-size:18px;margin:12px 0 10px;line-height:1.55}
+.lever p{color:var(--c-sub);font-size:14px;line-height:1.95}
+
+/* no-burden */
+.nb-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.nb-card{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:32px 30px}
+.nb-card .nn{font-family:var(--deco);font-style:italic;font-size:13px;color:var(--c-primary)}
+.nb-card h3{font-size:18px;margin:10px 0 10px;line-height:1.55}
+.nb-card p{color:var(--c-sub);font-size:14px;line-height:1.95}
+
+/* disclosure */
+.disc{max-width:766px;background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:32px 32px}
+.disc h3{font-size:18px;margin-bottom:12px}
+.disc p{color:var(--c-sub);font-size:14.5px;line-height:2}
+.disc ul{margin:14px 0 0 2px;list-style:none}
+.disc li{padding:10px 0;border-top:1px solid var(--c-border);font-size:14.5px;color:var(--c-body);display:flex;gap:12px}
+.disc li .chk{color:var(--c-primary);font-family:var(--serif);font-weight:700;flex:none}
+
+/* cta strip */
+.cta-strip{background:#fff;border:1px solid var(--c-border);border-radius:8px;padding:40px 44px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.cta-strip .ct{font-family:var(--serif);font-weight:700;font-size:clamp(18px,2.6vw,23px);color:var(--c-text);line-height:1.55}
+.cta-strip .cta-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+footer{background:#fff;color:var(--c-sub);padding:46px 0 40px;text-align:center;border-top:1px solid var(--c-border)}
+footer .brand{font-size:19px}
+footer p{font-size:12.5px;margin-top:14px;line-height:1.9;color:var(--c-mute)}
+.f-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:20px}
+.f-links a{font-size:12.5px;color:var(--c-sub);text-decoration:none}
+.f-links a:hover{color:var(--c-primary)}
+
+@media (max-width:860px){
+  section{padding:64px 0}
+  .site-nav{display:none}
+  .lever-grid{grid-template-columns:1fr;gap:14px}
+  .nb-grid{grid-template-columns:1fr;gap:14px}
+  .premium{padding:34px 24px}
+  .cta-strip{flex-direction:column;align-items:flex-start;padding:30px 26px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 18px}
+  .cta-strip .cta-btns{width:100%;flex-direction:column}
+  .cta-strip .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap row">
+    <a class="brand" href="index.html">SALAN <em>Education</em></a>
+    <nav class="site-nav">
+      <a href="program.html">制度詳細</a>
+      <a href="support.html">サポート体制</a>
+      <a href="economics.html" class="now">収益モデル</a>
+      <a href="index.html#entry">無料面談</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap"><div class="crumb"><a href="index.html">認定パートナー募集トップ</a> ／ 収益モデルの考え方</div></div>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Partner Economics</span>
+    <h1>収益モデルの<span class="o">考え方</span></h1>
+    <p class="sub">事業として参画を判断いただくために、収益設計の基本方針と構造をご説明します。具体的な料率・金額は現在最終調整中のため、このページでは「どういう思想で設計されているか」をお伝えし、正式な条件は面談時に書面でご提示します。<span class="tbd">要確認：正式条件</span></p>
+  </div>
+</div>
+
+<!-- 基本方針 -->
+<section class="grey" id="policy">
+  <div class="wrap">
+    <div class="premium">
+      <span class="plabel">Design principle</span>
+      <h2>“中抜き”はしない。<span class="g">価値の対価</span>だけをいただく。</h2>
+      <p>本部の取り分は、ブランド使用料の名目で一方的に徴収する“ロイヤリティ”ではなく、本部が実際に提供する機能——集客支援・実行チーム・品質管理・経理法務サポート・ナレッジアクセス権——の維持に必要な管理運営費として設計します。保護者・生徒の負担を増やして本部が潤う構造は、生徒起点というSALANの理念に反するからです。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 収益構造 -->
+<section id="structure">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Revenue structure</span>
+      <h2>パートナー収益の構造</h2>
+      <hr class="bar">
+      <p class="lead">塾の売上がパートナーの手元に届くまでの流れです。各項目の具体的な水準は面談時にご案内します。<span class="tbd">要確認：料率・内訳</span></p>
+    </div>
+    <div class="flow">
+      <div class="flow-node"><span class="fl">1 — Revenue</span><b>塾の売上（授業料収入）</b><p>パートナーが運営する塾の生徒からの授業料。生徒数 × 単価 × 継続期間で決まります。</p></div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node"><span class="fl">2 — Execution cost</span><b>実行コスト（本部実行チームの稼働）</b><p>毎日課題スタッフ・講師陣・教務ディレクターなど、その塾のために稼働する実行リソースの費用。</p></div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node"><span class="fl">3 — Platform fee</span><b>管理運営費（本部機能の維持費）</b><p>集客支援・品質管理・経理法務サポート・ナレッジアクセス権など、本部プラットフォームの提供機能に対応する費用。粗利からの必要最低限の徴収として設計します。</p></div>
+      <div class="flow-arrow"></div>
+      <div class="flow-node flow-final"><span class="fl">4 — Partner income</span><b>パートナー収益</b><p>残余がパートナーの収益となります。実行部隊の人件費・労務リスクを抱えないため、収益は現場価値（継続率・LTV）に連動します。</p></div>
+    </div>
+    <p class="flow-note"><b>実績数値・収益シミュレーションについて：</b>誠実な情報提供のため、実データが揃うまで想定値によるシミュレーションは掲載しません。面談では、前提条件を明示したうえで試算をご提示します。</p>
+  </div>
+</section>
+
+<!-- 収益レバー -->
+<section class="grey" id="levers">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Growth levers</span>
+      <h2>パートナー収益を伸ばす、3つのレバー。</h2>
+      <hr class="bar">
+      <p class="lead">この制度では、パートナーの収益はパートナー自身が担う「現場の価値」に直結するよう設計されています。実行作業の量ではなく、関係の質が収益を決めます。</p>
+    </div>
+    <div class="lever-grid">
+      <div class="lever"><span class="ln">01</span><h3>入塾率——相談型クロージング</h3><p>本部の集客ファネルが温めたリードを、面談・体験授業を通じて入塾に導く力。パートナーの相談型営業の質が最初のレバーです。</p></div>
+      <div class="lever"><span class="ln">02</span><h3>継続率——CSと信頼関係</h3><p>保護者・生徒が安心して通い続けられる環境づくり。塾長としてのCS品質が、退塾を防ぎ収益の土台を安定させます。</p></div>
+      <div class="lever"><span class="ln">03</span><h3>LTV——学習成果と進路支援</h3><p>教務長として生徒の成績と進路に成果を出すこと。成果は口コミ・紹介・SNS発信を通じて、次の生徒の獲得コストも下げます。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 抱えない構造 -->
+<section id="no-burden">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">What you don't carry</span>
+      <h2>抱えない、という経済性。</h2>
+      <hr class="bar">
+      <p class="lead">一般的な塾の独立開業と比べて、この制度でパートナーが「抱えなくてよい」ものを整理します。収益額だけでなく、リスクとコストの構造ごと比較してください。</p>
+    </div>
+    <div class="nb-grid">
+      <div class="nb-card"><span class="nn">No hiring risk</span><h3>採用・労務リスクを抱えない</h3><p>講師・スタッフの採用、教育、シフト、労務管理はすべて本部側の責任です。人件費の固定負担と、採用失敗のリスクをパートナーが負うことはありません。</p></div>
+      <div class="nb-card"><span class="nn">No marketing spend</span><h3>集客の仕組みをゼロから作らない</h3><p>広告クリエイティブ・LP・ナーチャリング導線は本部が運用します。集客の立ち上げ試行錯誤にかかる時間とコストを短縮できます。<span class="tbd">要確認：広告費の負担区分</span></p></div>
+      <div class="nb-card"><span class="nn">No ops build-out</span><h3>オペレーション構築が不要</h3><p>日次運用・エスカレーション・保護者報告・経理連携は標準マニュアル化済み。仕組みづくりではなく、初日から現場価値の提供に集中できます。</p></div>
+      <div class="nb-card"><span class="nn">Initial investment</span><h3>初期投資の考え方</h3><p>加盟金・保証金・研修費等の初期条件は現在整理中です。「参画障壁を不必要に高くしない」方針のもと設計し、面談時に書面でご提示します。<span class="tbd">要確認：初期条件</span></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 面談での開示 -->
+<section class="grey" id="disclosure">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Full disclosure at interview</span>
+      <h2>面談で、すべて開示します。</h2>
+      <hr class="bar">
+      <p class="lead">参画は事業判断です。判断に必要な情報を出し惜しみすることはありません。無料面談では、以下を書面でご確認いただけます。</p>
+    </div>
+    <div class="disc">
+      <h3>面談でご提示する資料</h3>
+      <ul>
+        <li><span class="chk">✓</span>管理運営費・収益配分の正式な条件（料率・計算方法）</li>
+        <li><span class="chk">✓</span>初期条件（加盟金・保証金・研修費等の有無と金額）</li>
+        <li><span class="chk">✓</span>広告費・実行コストの負担区分</li>
+        <li><span class="chk">✓</span>前提条件を明示した収益試算（生徒数別）</li>
+        <li><span class="chk">✓</span>契約期間・更新・解約の条件</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding:56px 0 90px">
+  <div class="wrap">
+    <div class="cta-strip">
+      <div class="ct">数字の話は、面談で正面から。<br>まずは制度の説明からでも構いません。</div>
+      <div class="cta-btns">
+        <a href="index.html#entry" class="btn btn-primary">無料面談を申し込む <span class="arw">→</span></a>
+        <a href="program.html" class="btn btn-outline">制度詳細を見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html">SALAN <em>Education</em></a>
+    <nav class="f-links">
+      <a href="index.html">募集トップ</a>
+      <a href="program.html">認定パートナー制度の詳細</a>
+      <a href="support.html">本部サポート体制</a>
+      <a href="index.html#entry">無料面談に申し込む</a>
+    </nav>
+    <p>SALAN — Student-first Advisory, Leveraged Alliance Network<br>大学受験専門塾 ガリレオ／プラトン 認定パートナープログラム ｜ 運営会社：<span class="tbd">要確認</span></p>
+  </div>
+</footer>
+
+</body>
+</html>

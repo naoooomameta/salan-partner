@@ -7,12 +7,17 @@ SALAN — Student-first Advisory, Leveraged Alliance Network
 
 ```
 salan-partner/
-├── index.html    ← LP本体（単一HTML・CSS/JSインライン）
-├── editor.html   ← ブラウザ編集エディタ（STUDIO風）
-├── server.js     ← エディタ用ローカルサーバ（Node標準モジュールのみ・install不要）
-├── design.md     ← デザイン仕様（StockSun参照トークン）
+├── index.html      ← LP本体（単一HTML・CSS/JSインライン）
+├── program.html    ← パートナー向け詳細：認定パートナー制度の詳細
+├── support.html    ← パートナー向け詳細：本部サポート体制
+├── economics.html  ← パートナー向け詳細：収益モデルの考え方
+├── editor.html     ← ブラウザ編集エディタ（STUDIO風・index.html専用）
+├── server.js       ← エディタ用ローカルサーバ（Node標準モジュールのみ・install不要）
+├── design.md       ← デザイン仕様（トークン・規約・サイト構成）
 └── README.md
 ```
+
+`program.html` / `support.html` / `economics.html` は認定パートナー候補（To B）向けの詳細ページ。LPのヘッダーnav・関連ページセクション・フッターから相互リンクしている。
 
 ## 編集方法（2通り）
 
@@ -35,7 +40,7 @@ node server.js
 
 ### B. コードを直接編集
 
-`index.html` を直接編集して commit。デザイン変更時は `design.md` のトークン・規約に従うこと（オレンジ #DB521F は点のみ、明朝見出し、白↔#F7F7F7交互、プレミアム帯は2箇所まで）。
+`index.html` および詳細ページ（`program.html` / `support.html` / `economics.html`）を直接編集して commit。デザイン変更時は `design.md` のトークン・規約に従うこと（オレンジ #DB521F は点のみ、明朝見出し、白↔#F7F7F7交互、プレミアム帯は各ページ2箇所まで）。ブラウザエディタが編集できるのは `index.html` のみ。
 
 ## デプロイ（GitHub → Netlify）
 
@@ -59,9 +64,10 @@ git push -u origin main
 
 LP内に `要確認` バッジで明示している未確定箇所。確定次第差し替えること。
 
-- [ ] 収益モデル（FAQ内・ロイヤリティ/粗利シェア/管理運営費）
-- [ ] 参画のスキル・実績要件（求める人物像）
-- [ ] 参画の正式ステップ（参画までの流れ）
+- [ ] 収益モデル（FAQ内および economics.html：料率・初期条件・広告費の負担区分・管理運営費）
+- [ ] 参画のスキル・実績要件（求める人物像および program.html の認定基準）
+- [ ] 参画の正式ステップ（参画までの流れおよび program.html の認定プロセス）
+- [ ] 開校前後の伴走内容の正式範囲（support.html）
 - [ ] フォーム送信先（GAS等のエンドポイント。現状はデモalert）
 - [ ] 実績数値・パートナーの声（実データが出た段階で追加。創作禁止）
 - [ ] フッターの運営会社表記（新会社 or HYUMA。特商法観点で公開時に必須）

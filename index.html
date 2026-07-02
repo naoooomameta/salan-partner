@@ -52,6 +52,22 @@ section{padding:90px 0}
 .brand{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--c-text);letter-spacing:.03em}
 .brand em{font-family:var(--deco);font-style:italic;color:var(--c-primary);font-size:15px;margin-left:9px}
 .hero-tag{font-size:12.5px;color:var(--c-mute)}
+.hero-nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.hero-nav a{font-size:13.5px;font-weight:500;color:var(--c-sub);text-decoration:none;transition:color .2s ease}
+.hero-nav a:hover{color:var(--c-primary)}
+.origin-link{display:inline-block;margin-top:8px;font-weight:700;color:var(--c-primary);text-decoration:none;font-size:13.5px}
+.origin-link:hover{text-decoration:underline}
+.faq-a .inner a{color:var(--c-primary);font-weight:700;text-decoration:none}
+.faq-a .inner a:hover{text-decoration:underline}
+
+/* ================= RELATED PAGES ================= */
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rel-card{display:block;background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:32px 28px;text-decoration:none;transition:border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.rel-card:hover{border-color:var(--c-primary);transform:translateY(-3px);box-shadow:0 14px 28px -18px rgba(32,32,32,.35)}
+.rel-card .rk{font-family:var(--deco);font-style:italic;font-size:13px;color:var(--c-primary);display:block;margin-bottom:10px}
+.rel-card h3{font-size:19px;line-height:1.55;margin-bottom:10px}
+.rel-card p{color:var(--c-sub);font-size:13.5px;line-height:1.9}
+.rel-card .rgo{display:inline-block;margin-top:16px;font-family:var(--sans);font-weight:700;font-size:13.5px;color:var(--c-primary)}
 .hero-inner{padding-top:64px;max-width:840px}
 .hero h1{font-size:clamp(29px,5.4vw,50px);line-height:1.44;letter-spacing:.01em;color:var(--c-text)}
 .hero h1 .o{color:var(--c-primary)}
@@ -215,6 +231,9 @@ footer .brand{color:var(--c-text)}
 footer .brand em{color:var(--c-primary)}
 footer p{font-size:12.5px;margin-top:14px;line-height:1.9;color:var(--c-mute)}
 footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a9a9a;margin-top:16px}
+.f-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:20px}
+.f-links a{font-size:12.5px;color:var(--c-sub);text-decoration:none}
+.f-links a:hover{color:var(--c-primary)}
 
 /* ================= STICKY MOBILE CTA ================= */
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;background:#fff;padding:11px 14px;border-top:1px solid var(--c-border);gap:10px;box-shadow:0 -6px 20px -12px rgba(0,0,0,.25)}
@@ -228,6 +247,8 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
   .ribbon{grid-template-columns:1fr}
   .ribbon .item + .item{border-left:0;border-top:1px solid var(--c-border)}
   .prob-grid{grid-template-columns:1fr;gap:14px}
+  .rel-grid{grid-template-columns:1fr;gap:14px}
+  .hero-nav{display:none}
   .premium{padding:38px 26px}
   .acronym{grid-template-columns:1fr}
   .acr{flex-direction:row;align-items:baseline;gap:12px;padding:14px 18px}
@@ -266,6 +287,12 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
   <div class="wrap">
     <div class="hero-top">
       <div class="brand">SALAN <em>Education</em></div>
+      <nav class="hero-nav">
+        <a href="program.html">制度詳細</a>
+        <a href="support.html">サポート体制</a>
+        <a href="economics.html">収益モデル</a>
+        <a href="#faq">FAQ</a>
+      </nav>
       <div class="hero-tag">大学受験専門塾 ガリレオ／プラトン｜認定パートナー募集</div>
     </div>
     <div class="hero-inner">
@@ -339,7 +366,7 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
     <div class="define-body">
       <p>担うのは、生徒との関係構築、学習アドバイザリー、進路相談、そして入塾までの相談型営業。生徒と保護者が安心して通い続けられる環境をつくることが、パートナーの役割です。</p>
       <p>日々の実行（課題設計・配布・採点・授業）は本部が担当。あなたは実務に埋もれることなく、塾長・教務長としての価値提供に集中できます。採用も労務もシフト管理も、抱える必要はありません。</p>
-      <div class="origin"><b>制度の思想：</b>品質責任者制度で知られるStockSun式のパートナーモデルを、大学受験教育に応用したものです。責任者は現場を握り、実行リソースはプラットフォーム側が供給する——この分業構造を教育に持ち込んだのが、この制度です。</div>
+      <div class="origin"><b>制度の思想：</b>現場の責任者が生徒と向き合う「ハンドル」を握り、日々の実行リソースは本部＝プラットフォーム側が供給する。この分業構造を大学受験教育のために設計したのが、SALANの認定パートナー制度です。<br><a href="program.html" class="origin-link">制度の詳細を見る →</a></div>
     </div>
   </div>
 </section>
@@ -562,7 +589,7 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
     <div class="narrow" style="margin:0 auto">
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">収益モデルはどうなっていますか？<span class="mk">+</span></button>
-        <div class="faq-a"><div class="inner">【要確認】ロイヤリティ／粗利シェア／管理運営費など、収益設計の具体はこちらに記載します。参考として、応用元となったStockSun式のモデルでは、クライアント負担を増やす“中抜き”は行わず、プロジェクトの粗利から必要最低限の管理運営費（営業関連費・品質管理・経理法務サポート・ナレッジアクセス権など）を徴収する形をとっています。ガリレオ／プラトンでの正式な条件は面談時にご案内します。</div></div>
+        <div class="faq-a"><div class="inner">【要確認】ロイヤリティ／粗利シェア／管理運営費など、収益設計の具体はこちらに記載します。基本方針として、保護者・生徒の負担を増やす“中抜き”は行わず、塾の粗利から本部機能の維持に必要な管理運営費（集客支援・品質管理・経理法務サポート・ナレッジアクセス権など）のみをいただく設計です。考え方の全体像は「<a href="economics.html">収益モデルの考え方</a>」にまとめています。正式な条件は面談時にご案内します。</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">本部の実行チームの品質は担保されますか？<span class="mk">+</span></button>
@@ -576,6 +603,38 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
         <button class="faq-q" aria-expanded="false">対応エリアや、オンライン/対面の別は？<span class="mk">+</span></button>
         <div class="faq-a"><div class="inner">【要確認】オンライン中心か、地域拠点型かによって対象エリアが変わります。運用ツール（LINE Works・Googleドライブ等）はオンライン前提で整備されています。正式な対応範囲はこちらに記載します。</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RELATED PAGES ============ -->
+<section class="grey" id="related">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">For prospective partners</span>
+      <h2>参画をご検討中の方へ——詳細資料</h2>
+      <hr class="bar">
+      <p class="lead">面談の前に制度を深く理解いただけるよう、事業パートナー向けの詳細ページをご用意しています。</p>
+    </div>
+    <div class="rel-grid">
+      <a class="rel-card" href="program.html">
+        <span class="rk">Program</span>
+        <h3>認定パートナー制度の詳細</h3>
+        <p>役割定義・認定基準・品質ガイドライン・認定までのプロセス。ブランドを背負う「現場の責任者」の制度設計の全体像。</p>
+        <span class="rgo">詳しく見る →</span>
+      </a>
+      <a class="rel-card" href="support.html">
+        <span class="rk">Support</span>
+        <h3>本部サポート体制</h3>
+        <p>実行チームの構成、実証済みの集客ファネル、日次オペレーション、品質指標。本部が「実行」をどう担うかの具体。</p>
+        <span class="rgo">詳しく見る →</span>
+      </a>
+      <a class="rel-card" href="economics.html">
+        <span class="rk">Economics</span>
+        <h3>収益モデルの考え方</h3>
+        <p>“中抜き”をしない収益設計の基本方針と、パートナー収益の構造・レバー。参画判断に必要な経済性の枠組み。</p>
+        <span class="rgo">詳しく見る →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -617,6 +676,12 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
 <footer id="footer">
   <div class="wrap">
     <div class="brand">SALAN <em>Education</em></div>
+    <nav class="f-links">
+      <a href="program.html">認定パートナー制度の詳細</a>
+      <a href="support.html">本部サポート体制</a>
+      <a href="economics.html">収益モデルの考え方</a>
+      <a href="#entry">無料面談に申し込む</a>
+    </nav>
     <p>SALAN — Student-first Advisory, Leveraged Alliance Network<br>大学受験専門塾 ガリレオ／プラトン 認定パートナープログラム ｜ 運営会社：<span class="tbd">要確認</span></p>
     <p class="fnote">© 2026 SALAN Education — Certified Partner Program (draft)</p>
   </div>
