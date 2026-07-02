@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>本部サポート体制｜SALAN Education 認定パートナー募集</title>
+<meta name="description" content="SALAN本部が認定パートナーに提供する実行体制の詳細。実行チームの構成、実証済みの集客ファネル、毎日課題の日次オペレーション、品質指標とツールスタック。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Gentium+Book+Plus:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --c-primary:#DB521F; --c-primary-dark:#A63E17;
+  --c-gold:#F0CC96; --c-brown:#846955;
+  --c-text:#202020; --c-body:#333333; --c-sub:#666666; --c-mute:#707070;
+  --c-bg:#FFFFFF; --c-grey:#F7F7F7; --c-border:#E3E3E3;
+  --serif:"Noto Serif JP",serif; --sans:"Noto Sans JP",sans-serif; --deco:"Gentium Book Plus",serif;
+  --grad:linear-gradient(-61deg,#DB521F 50%,#A63E17 0);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:16px;line-height:1.7;color:var(--c-body);background:var(--c-bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.narrow{max-width:766px}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--c-text);font-weight:700;line-height:1.42}
+.eyebrow{font-family:var(--deco);font-style:italic;font-size:15px;letter-spacing:.06em;color:var(--c-primary);display:block;margin-bottom:14px}
+.bar{width:46px;height:3px;background:var(--c-primary);margin:20px 0 22px;border:0}
+.sec-head{margin-bottom:48px}
+.sec-head h2{font-size:clamp(24px,3.6vw,30px)}
+.sec-head .lead{color:var(--c-sub);font-size:16px;margin-top:20px;line-height:1.95}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:15.5px;padding:17px 34px;border-radius:5px;text-decoration:none;cursor:pointer;border:none;transition:transform .2s ease,box-shadow .2s ease}
+.btn-primary{background-image:var(--grad);color:#fff;box-shadow:0 8px 22px -10px rgba(219,82,31,.75)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(219,82,31,.85)}
+.btn-outline{background:#fff;color:var(--c-text);border:1.5px solid var(--c-border)}
+.btn-outline:hover{border-color:var(--c-primary);color:var(--c-primary)}
+.btn .arw{font-family:var(--deco);transition:transform .2s ease}
+.btn:hover .arw{transform:translateX(3px)}
+section{padding:90px 0}
+.grey{background:var(--c-grey)}
+.tbd{display:inline-block;color:#fff;background:var(--c-primary);font-family:var(--sans);font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:.03em;white-space:nowrap;vertical-align:middle}
+
+/* header */
+.site-head{padding:22px 0;border-bottom:1px solid var(--c-border)}
+.site-head .row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.brand{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--c-text);letter-spacing:.03em;text-decoration:none}
+.brand em{font-family:var(--deco);font-style:italic;color:var(--c-primary);font-size:15px;margin-left:9px}
+.site-nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.site-nav a{font-size:13.5px;font-weight:500;color:var(--c-sub);text-decoration:none}
+.site-nav a:hover,.site-nav a.now{color:var(--c-primary)}
+.site-nav a.now{font-weight:700}
+.crumb{font-size:12.5px;color:var(--c-mute);padding:16px 0 0}
+.crumb a{color:var(--c-mute);text-decoration:none}
+.crumb a:hover{color:var(--c-primary)}
+
+/* page hero */
+.page-hero{padding:64px 0 72px}
+.page-hero h1{font-size:clamp(27px,4.6vw,42px);line-height:1.5}
+.page-hero h1 .o{color:var(--c-primary)}
+.page-hero .sub{font-size:clamp(15px,2vw,16.5px);color:var(--c-sub);line-height:2;margin-top:24px;max-width:720px}
+
+/* team cards */
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.team-card{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:32px 28px}
+.team-card .tn{font-family:var(--deco);font-style:italic;font-size:13px;color:var(--c-primary)}
+.team-card h3{font-size:18px;margin:10px 0 10px;line-height:1.55}
+.team-card p{color:var(--c-sub);font-size:14px;line-height:1.95}
+
+/* funnel */
+.funnel{max-width:640px}
+.fn-node{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:18px 22px;display:flex;align-items:center;gap:14px}
+.fn-node .ic{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--c-primary);border:1.5px solid var(--c-primary);border-radius:50%;width:30px;height:30px;display:grid;place-items:center;flex:none}
+.fn-node .tx{font-weight:700;font-size:15px;color:var(--c-text)}
+.fn-node .tx small{display:block;font-weight:400;color:var(--c-mute);font-size:12.5px;margin-top:2px}
+.fn-arrow{width:1px;height:20px;background:var(--c-border);margin:5px 0 5px 37px}
+.fn-final{border:1px solid #EBC9B4;background:#FDF6F1}
+.fn-final .ic{background-image:var(--grad);color:#fff;border-color:transparent}
+.fn-note{max-width:640px;margin-top:24px;border-left:3px solid var(--c-primary);background:var(--c-grey);padding:20px 24px;font-size:14px;color:var(--c-sub);line-height:1.95;border-radius:0 4px 4px 0}
+.fn-note b{color:var(--c-text)}
+
+/* timeline */
+.timeline{max-width:900px}
+.tl-row{display:grid;grid-template-columns:130px 160px 1fr;gap:22px;padding:22px 0;border-top:1px solid var(--c-border)}
+.tl-row:last-child{border-bottom:1px solid var(--c-border)}
+.tl-time{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--c-text)}
+.tl-who{font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.tl-who::before{content:"";width:8px;height:8px;border-radius:50%}
+.tl-who.hq{color:var(--c-primary)}
+.tl-who.hq::before{background:var(--c-primary)}
+.tl-who.stu{color:var(--c-mute)}
+.tl-who.stu::before{background:var(--c-mute)}
+.tl-act{font-size:14.5px;color:var(--c-body);line-height:1.8}
+.tl-act small{display:block;color:var(--c-mute);font-size:12.5px;margin-top:3px}
+
+/* KPI cards */
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.kpi{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:30px 28px}
+.kpi .kv{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--c-text);line-height:1.5}
+.kpi .kv .o{color:var(--c-primary)}
+.kpi p{color:var(--c-sub);font-size:13.5px;line-height:1.9;margin-top:10px}
+
+/* tools */
+.tool-list{list-style:none;max-width:900px}
+.tool-list li{display:grid;grid-template-columns:190px 1fr;gap:22px;padding:20px 0;border-top:1px solid var(--c-border);font-size:14.5px}
+.tool-list li:last-child{border-bottom:1px solid var(--c-border)}
+.tool-list .tt{font-family:var(--serif);font-weight:700;color:var(--c-text)}
+.tool-list .td{color:var(--c-sub);line-height:1.9}
+
+/* onboarding */
+.ob-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.ob-card{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:32px 30px}
+.ob-card .on{font-family:var(--deco);font-style:italic;font-size:13px;color:var(--c-primary)}
+.ob-card h3{font-size:18px;margin:10px 0 10px;line-height:1.55}
+.ob-card p{color:var(--c-sub);font-size:14px;line-height:1.95}
+
+/* cta strip */
+.cta-strip{background:#fff;border:1px solid var(--c-border);border-radius:8px;padding:40px 44px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.cta-strip .ct{font-family:var(--serif);font-weight:700;font-size:clamp(18px,2.6vw,23px);color:var(--c-text);line-height:1.55}
+.cta-strip .cta-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+footer{background:#fff;color:var(--c-sub);padding:46px 0 40px;text-align:center;border-top:1px solid var(--c-border)}
+footer .brand{font-size:19px}
+footer p{font-size:12.5px;margin-top:14px;line-height:1.9;color:var(--c-mute)}
+.f-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:20px}
+.f-links a{font-size:12.5px;color:var(--c-sub);text-decoration:none}
+.f-links a:hover{color:var(--c-primary)}
+
+@media (max-width:860px){
+  section{padding:64px 0}
+  .site-nav{display:none}
+  .team-grid,.kpi-grid{grid-template-columns:1fr;gap:14px}
+  .ob-grid{grid-template-columns:1fr;gap:14px}
+  .tl-row{grid-template-columns:1fr;gap:5px}
+  .tool-list li{grid-template-columns:1fr;gap:4px}
+  .cta-strip{flex-direction:column;align-items:flex-start;padding:30px 26px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 18px}
+  .cta-strip .cta-btns{width:100%;flex-direction:column}
+  .cta-strip .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap row">
+    <a class="brand" href="index.html">SALAN <em>Education</em></a>
+    <nav class="site-nav">
+      <a href="program.html">制度詳細</a>
+      <a href="support.html" class="now">サポート体制</a>
+      <a href="economics.html">収益モデル</a>
+      <a href="index.html#entry">無料面談</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap"><div class="crumb"><a href="index.html">認定パートナー募集トップ</a> ／ 本部サポート体制</div></div>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Head Office Support</span>
+    <h1>「実行は本部が持つ」の<span class="o">具体</span>。</h1>
+    <p class="sub">認定パートナーが生徒と向き合うことに専念できるのは、本部が塾運営の“実行”を仕組みで回しているからです。ここでは、実行チームの構成、集客ファネル、日次オペレーション、品質管理の具体をご説明します。</p>
+  </div>
+</div>
+
+<!-- 実行チーム -->
+<section class="grey" id="team">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Execution team</span>
+      <h2>実行チームの構成</h2>
+      <hr class="bar">
+      <p class="lead">パートナーの塾には、本部から3つの機能が供給されます。採用・教育・シフト管理は本部側の責任で行い、パートナーが人を抱えることはありません。</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card"><span class="tn">Function 01</span><h3>教務ディレクター</h3><p>毎日課題の範囲設計・進行管理・スタッフへの指示出し。科目・教材・ページ・問題番号まで指定し、課題が滞りなく配布される状態を維持します。</p></div>
+      <div class="team-card"><span class="tn">Function 02</span><h3>毎日課題スタッフ</h3><p>指定範囲の課題配布と丸つけを日次で実行。課題出し達成率100%を目指す標準運用に従って稼働します。</p></div>
+      <div class="team-card"><span class="tn">Function 03</span><h3>講師陣</h3><p>各科目の授業・質問対応・学習指導を担当。苦手単元の解消と成績向上に責任を持ち、パートナーの学習設計と連動します。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 集客ファネル -->
+<section id="funnel">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Acquisition funnel</span>
+      <h2>実証済みの集客ファネルを、そのまま使う。</h2>
+      <hr class="bar">
+      <p class="lead">広告出稿から面談・体験授業までの導線は、本部が設計・運用します。パートナーは、温まったリードへの相談型クロージングから参加すれば足ります。</p>
+    </div>
+    <div class="funnel">
+      <div class="fn-node"><span class="ic">1</span><div class="tx">Meta広告 → LP<small>本部がクリエイティブ制作・運用・改善</small></div></div>
+      <div class="fn-arrow"></div>
+      <div class="fn-node"><span class="ic">2</span><div class="tx">LINE登録 ＋ 無料診断<small>興味段階の見込み客をリスト化</small></div></div>
+      <div class="fn-arrow"></div>
+      <div class="fn-node"><span class="ic">3</span><div class="tx">3日間ナーチャリング<small>自動配信で理解と信頼を醸成</small></div></div>
+      <div class="fn-arrow"></div>
+      <div class="fn-node"><span class="ic">4</span><div class="tx">面談 → 体験授業<small>ここからパートナーが対応</small></div></div>
+      <div class="fn-arrow"></div>
+      <div class="fn-node fn-final"><span class="ic">5</span><div class="tx">クロージング → 入塾<small>相談型営業。押し売りはしない</small></div></div>
+    </div>
+    <p class="fn-note"><b>パートナーの参加ポイントは Step 4 から。</b>広告運用・導線改善のPDCAは本部側の業務であり、パートナーが広告スキルを持つ必要はありません。加えて、パートナー自身のSNS発信が公式アカウントと連携し、広告に依存しない認知基盤を積み上げます。</p>
+  </div>
+</section>
+
+<!-- 日次オペレーション -->
+<section class="grey" id="ops">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Daily operations</span>
+      <h2>毎日課題の日次オペレーション</h2>
+      <hr class="bar">
+      <p class="lead">課題設計 → 配布 → 生徒の取り組み → 採点・返却。この日次サイクルは、すべて本部の担当が時刻連動で実行します。</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-time">00:00 過ぎ</div>
+        <div class="tl-who hq">教務ディレクター</div>
+        <div class="tl-act">LINE Worksで翌日分の課題範囲を指示（ディレクション）<small>科目・教材・ページ・問題番号まで指定</small></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">翌 9:00–10:00</div>
+        <div class="tl-who hq">毎日課題スタッフ</div>
+        <div class="tl-act">指示をもとにGoogleドライブから課題を抽出し、生徒へ配布<small>抽出は10〜15分／午前中に配布完了</small></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">18:00–24:00</div>
+        <div class="tl-who stu">生徒</div>
+        <div class="tl-act">配布された課題に取り組み、提出<small>夕方〜深夜に提出</small></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">翌 8:00–9:00</div>
+        <div class="tl-who hq">毎日課題スタッフ</div>
+        <div class="tl-act">提出課題を採点し、LINE Worksで返却<small>1件あたり約10分</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 品質指標 -->
+<section id="quality">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Quality management</span>
+      <h2>品質は、指標で可視化する。</h2>
+      <hr class="bar">
+      <p class="lead">「本部の実行品質は担保されるのか」——パートナーにとって最重要の問いに、指標と運用ルールで答えます。実行品質は感覚ではなく数字で管理されます。</p>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi"><div class="kv">課題出し<span class="o">達成率</span></div><p>毎日課題が予定どおり配布されたかを日次で計測。達成率100%を標準とし、未達はその日のうちにエスカレーションされます。</p></div>
+      <div class="kpi"><div class="kv">丸つけ<span class="o">実施率</span></div><p>提出課題が翌朝までに採点・返却されたかを計測。生徒の学習サイクルを止めないための基幹指標です。</p></div>
+      <div class="kpi"><div class="kv">返信<span class="o">遅延件数</span></div><p>生徒・保護者への返信遅延を件数で管理。エスカレーションルールと運用改善のトリガーとして機能します。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ツール -->
+<section class="grey" id="tools">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Tool stack</span>
+      <h2>運用ツールは、標準化済み。</h2>
+      <hr class="bar">
+      <p class="lead">パートナーがゼロからツールを選定・構築する必要はありません。ネットワーク全体で統一されたスタックの上で運用します。</p>
+    </div>
+    <ul class="tool-list">
+      <li><span class="tt">LINE Works</span><span class="td">生徒・保護者・本部チームのやり取りをすべて集約。課題の指示・配布・提出・返却もここで完結します。</span></li>
+      <li><span class="tt">Googleドライブ</span><span class="td">教材・課題データベース。教務ディレクターの指示に基づき、スタッフが課題を抽出・配布します。</span></li>
+      <li><span class="tt">標準マニュアル</span><span class="td">日次タイムライン・エスカレーションルール・保護者報告・経理連携フローまで文書化。属人化を排した運用の土台です。</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- オンボーディング -->
+<section id="onboarding">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Onboarding</span>
+      <h2>開校前後の伴走</h2>
+      <hr class="bar">
+      <p class="lead">認定から開校、そして運用の安定化まで、本部が段階的に伴走します。<span class="tbd">要確認：伴走内容の正式範囲</span></p>
+    </div>
+    <div class="ob-grid">
+      <div class="ob-card"><span class="on">Before launch</span><h3>開校前——立ち上げ支援</h3><p>集客ファネルのセットアップ、運用ツールの開通、標準マニュアルの引き渡しとトレーニング。トライアル期間中に実運用への習熟を完了させます。</p></div>
+      <div class="ob-card"><span class="on">After launch</span><h3>開校後——運用の伴走</h3><p>品質指標のモニタリングと定期レビュー、運用改善の提案、経理・法務まわりのサポート。パートナーが現場に集中し続けられる状態を維持します。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="grey" style="padding:56px 0 90px">
+  <div class="wrap">
+    <div class="cta-strip">
+      <div class="ct">実行体制の詳細は、<br>無料面談でデモを交えてご説明します。</div>
+      <div class="cta-btns">
+        <a href="index.html#entry" class="btn btn-primary">無料面談を申し込む <span class="arw">→</span></a>
+        <a href="economics.html" class="btn btn-outline">収益モデルを見る</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="index.html">SALAN <em>Education</em></a>
+    <nav class="f-links">
+      <a href="index.html">募集トップ</a>
+      <a href="program.html">認定パートナー制度の詳細</a>
+      <a href="economics.html">収益モデルの考え方</a>
+      <a href="index.html#entry">無料面談に申し込む</a>
+    </nav>
+    <p>SALAN — Student-first Advisory, Leveraged Alliance Network<br>大学受験専門塾 ガリレオ／プラトン 認定パートナープログラム ｜ 運営会社：<span class="tbd">要確認</span></p>
+  </div>
+</footer>
+
+</body>
+</html>
