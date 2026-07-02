@@ -29,6 +29,9 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--c-text);font-weight:700;line-he
 
 /* ---- eyebrow (English deco label) + heading block ---- */
 .eyebrow{font-family:var(--deco);font-style:italic;font-size:15px;letter-spacing:.06em;color:var(--c-primary);display:block;margin-bottom:14px}
+.cap-line{display:flex;gap:10px;flex-wrap:wrap;margin:2px 0 20px}
+.cap-badge{display:inline-block;font-size:12.5px;font-weight:700;color:var(--c-primary);border:1.5px solid var(--c-primary);border-radius:4px;padding:5px 13px;letter-spacing:.04em}
+.cap-badge.sub{color:var(--c-sub);border-color:var(--c-border)}
 .bar{width:46px;height:3px;background:var(--c-primary);margin:20px 0 22px;border:0}
 .sec-head{margin-bottom:48px}
 .sec-head h2{font-size:clamp(24px,3.6vw,30px)}
@@ -297,8 +300,9 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
     </div>
     <div class="hero-inner">
       <span class="eyebrow">Certified Partner Program</span>
+      <div class="cap-line"><span class="cap-badge">第1期 募集枠 5名</span><span class="cap-badge sub">1名あたり担任生徒 40名</span></div>
       <h1>塾の<span class="o">実行</span>は、本部が持つ。<br>あなたは、生徒と向き合う<br><span class="u">塾長・教務長</span>に専念する。</h1>
-      <p class="hero-sub">集客・毎日課題の設計・配布・採点・講師——塾運営の「実行」はすべてSALAN本部の専門チームが担当。認定パートナーは現場のハンドルを握り、保護者と生徒に向き合うことに集中できます。</p>
+      <p class="hero-sub">集客・毎日課題の設計・配布・採点・講師——塾運営の「実行」はすべてSALAN本部の専門チームが担当。認定パートナーは生徒40名を担任する現場の責任者として、保護者と生徒に向き合うことに集中できます。</p>
       <div class="hero-cta">
         <a href="#entry" class="btn btn-primary">パートナー説明を受ける <span class="arw">→</span></a>
         <a href="#model" class="btn btn-outline">モデルを見る</a>
@@ -542,7 +546,7 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
       <span class="eyebrow">Who we're looking for</span>
       <h2>求める人物像</h2>
       <hr class="bar">
-      <p class="lead">対象は、塾長と教務長を兼任できる方。生徒・保護者に向き合う姿勢と、学習をリードできる指導力の両方をお持ちの方を募集します。</p>
+      <p class="lead">対象は、塾長と教務長を兼任し、生徒40名を担任できる方。生徒・保護者に向き合う姿勢と、学習をリードできる指導力の両方をお持ちの方を、第1期は5名限定で募集します。</p>
     </div>
     <div class="req-grid">
       <ul class="req-list">
@@ -589,7 +593,7 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
     <div class="narrow" style="margin:0 auto">
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">収益モデルはどうなっていますか？<span class="mk">+</span></button>
-        <div class="faq-a"><div class="inner">売上（月謝45,000円 × 生徒数）から、実費連動の実行コスト（講師・毎日課題・教務ディレクター）、広告費（月50万円）、ロイヤリティ（売上の30%）を差し引いた残余が、すべてパートナーの収益になります。標準モデル（生徒200名）で年間売上1億800万円、パートナー収益4,104万円（売上比38%）。計算式ごと開示した収益シミュレーションを「<a href="economics.html">収益モデル・シミュレーション</a>」に掲載しています。</div></div>
+        <div class="faq-a"><div class="inner">認定パートナーは1名あたり生徒40名を担任します。担任生徒の月謝収入（45,000円 × 40名 ＝ 月180万円）から、担任生徒数に連動する従量制の運営費用（実行リソース利用料・広告費・本部運営費）を差し引いた残余がパートナーの収益となり、標準モデルで年間約820万円（月換算約68万円）です。詳細は「<a href="economics.html">収益モデル・シミュレーション</a>」をご覧ください。費用の単価・内訳は面談時に書面でご提示します。</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">本部の実行チームの品質は担保されますか？<span class="mk">+</span></button>
@@ -632,7 +636,7 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
       <a class="rel-card" href="economics.html">
         <span class="rk">Economics</span>
         <h3>収益モデル・シミュレーション</h3>
-        <p>標準モデル（生徒200名）で年間パートナー収益4,104万円。費用の単価・計算式まで全開示した収益シミュレーション。</p>
+        <p>担任生徒40名の標準モデルで、パートナー収益は年間約820万円（月換算約68万円）。パートナー目線の収益構造とシミュレーション。</p>
         <span class="rgo">詳しく見る →</span>
       </a>
     </div>
@@ -646,7 +650,7 @@ footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a
       <span class="eyebrow">Entry</span>
       <h2>“実行を抱えない塾長”という<br>選択肢を、話してみませんか。</h2>
       <hr class="bar">
-      <p class="lead">まずは無料のオンライン面談から。モデルの詳細・収益設計・運用体制を、あなたの状況に合わせてご説明します。</p>
+      <p class="lead">まずは無料のオンライン面談から。モデルの詳細・収益設計・運用体制を、あなたの状況に合わせてご説明します。第1期の募集は5名限定。募集枠に達し次第、締め切ります。</p>
     </div>
     <form class="form" onsubmit="return handleSubmit(event)">
       <div class="form-row">
