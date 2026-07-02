@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SALAN Education 認定パートナー募集｜大学受験専門塾 ガリレオ／プラトン</title>
+<meta name="description" content="SALAN — Student-first Advisory, Leveraged Alliance Network。実行は本部、ハンドルはあなた。塾長・教務長として生徒と向き合うことに専念できる、ガリレオ／プラトンの認定パートナー制度です。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Gentium+Book+Plus:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --c-primary:#DB521F; --c-primary-dark:#A63E17; --c-primary-bright:#F06734;
+  --c-accent-blue:#1E53B5;
+  --c-gold:#F0CC96; --c-gold-deep:#9D7F51; --c-brown:#846955;
+  --c-text:#202020; --c-body:#333333; --c-sub:#666666; --c-mute:#707070;
+  --c-bg:#FFFFFF; --c-grey:#F7F7F7; --c-grey2:#F5F5F5; --c-border:#E3E3E3;
+  --serif:"Noto Serif JP",serif;
+  --sans:"Noto Sans JP",sans-serif;
+  --deco:"Gentium Book Plus",serif;
+  --grad:linear-gradient(-61deg,#DB521F 50%,#A63E17 0);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:16px;line-height:1.7;color:var(--c-body);background:var(--c-bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.narrow{max-width:766px}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--c-text);font-weight:700;line-height:1.42}
+
+/* ---- eyebrow (English deco label) + heading block ---- */
+.eyebrow{font-family:var(--deco);font-style:italic;font-size:15px;letter-spacing:.06em;color:var(--c-primary);display:block;margin-bottom:14px}
+.bar{width:46px;height:3px;background:var(--c-primary);margin:20px 0 22px;border:0}
+.sec-head{margin-bottom:48px}
+.sec-head h2{font-size:clamp(24px,3.6vw,30px)}
+.sec-head .lead{color:var(--c-sub);font-size:16px;margin-top:20px;line-height:1.95}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:15.5px;padding:17px 34px;border-radius:5px;text-decoration:none;cursor:pointer;border:none;transition:transform .2s ease,box-shadow .2s ease,opacity .2s ease}
+.btn-primary{background-image:var(--grad);color:#fff;box-shadow:0 8px 22px -10px rgba(219,82,31,.75)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(219,82,31,.85)}
+.btn-outline{background:#fff;color:var(--c-text);border:1.5px solid var(--c-border)}
+.btn-outline:hover{border-color:var(--c-primary);color:var(--c-primary)}
+.btn .arw{font-family:var(--deco);transition:transform .2s ease}
+.btn:hover .arw{transform:translateX(3px)}
+
+section{padding:90px 0}
+.grey{background:var(--c-grey)}
+
+/* ================= HERO ================= */
+.hero{background:var(--c-bg);padding:26px 0 88px;position:relative}
+.hero-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding-bottom:44px;border-bottom:1px solid var(--c-border)}
+.brand{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--c-text);letter-spacing:.03em}
+.brand em{font-family:var(--deco);font-style:italic;color:var(--c-primary);font-size:15px;margin-left:9px}
+.hero-tag{font-size:12.5px;color:var(--c-mute)}
+.hero-inner{padding-top:64px;max-width:840px}
+.hero h1{font-size:clamp(29px,5.4vw,50px);line-height:1.44;letter-spacing:.01em;color:var(--c-text)}
+.hero h1 .o{color:var(--c-primary)}
+.hero h1 .u{background:linear-gradient(transparent 66%, rgba(219,82,31,.16) 66%)}
+.hero .hero-sub{font-size:clamp(15px,2vw,17px);color:var(--c-sub);line-height:2;margin:26px 0 38px;max-width:680px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-note{font-size:12px;color:var(--c-mute);margin-top:16px}
+.ribbon{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--c-border);border-radius:6px;overflow:hidden}
+.ribbon .item{padding:22px 26px;background:#fff}
+.ribbon .item + .item{border-left:1px solid var(--c-border)}
+.ribbon .k{font-family:var(--deco);font-style:italic;font-size:13px;color:var(--c-primary);display:block;margin-bottom:6px}
+.ribbon .v{font-family:var(--serif);font-weight:600;font-size:15px;color:var(--c-text);line-height:1.6}
+
+/* ================= PROBLEM ================= */
+.prob-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:32px 28px}
+.card .n{font-family:var(--serif);font-weight:700;font-size:26px;color:var(--c-primary)}
+.card h3{font-size:19px;margin:12px 0 12px;line-height:1.5}
+.card p{color:var(--c-sub);font-size:14.5px;line-height:1.9}
+.bridge{max-width:766px;margin:52px auto 0;text-align:center;font-family:var(--serif);font-weight:600;font-size:clamp(19px,2.9vw,25px);line-height:1.7;color:var(--c-text)}
+.bridge .u{background:linear-gradient(transparent 64%, rgba(219,82,31,.18) 64%);padding:0 4px}
+
+/* ================= PREMIUM DEFINITION ================= */
+.define{background:var(--c-bg)}
+.premium{background:var(--c-brown);border-radius:8px;padding:52px 48px;color:#F1E9DF;position:relative;overflow:hidden}
+.premium::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;border:1px solid rgba(240,204,150,.18);border-radius:50%}
+.premium .plabel{font-family:var(--deco);font-style:italic;font-size:14px;letter-spacing:.08em;color:var(--c-gold);display:block;margin-bottom:18px}
+.premium h2{font-family:var(--serif);font-weight:700;font-size:clamp(21px,3.2vw,30px);line-height:1.6;color:#fff}
+.premium h2 .g{color:var(--c-gold)}
+.premium .pnote{color:#E3D6C6;font-size:15px;line-height:2;margin-top:22px;max-width:720px}
+.acronym{margin-top:34px;display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(240,204,150,.25);border:1px solid rgba(240,204,150,.25);border-radius:6px;overflow:hidden;position:relative;z-index:1}
+.acr{background:var(--c-brown);padding:18px 16px;display:flex;flex-direction:column;gap:3px}
+.acr .al{font-family:var(--serif);font-weight:700;font-size:24px;color:var(--c-gold);line-height:1}
+.acr .aw{font-family:var(--deco);font-style:italic;font-size:13px;color:#F1E9DF;margin-top:6px}
+.acr .aj{font-size:11.5px;color:#D8C8B4;line-height:1.6}
+.define-body{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.define-body p{color:var(--c-body);font-size:15.5px;line-height:2.05}
+.origin{grid-column:1/-1;margin-top:6px;border-left:3px solid var(--c-primary);background:var(--c-grey);padding:22px 26px;font-size:14px;color:var(--c-sub);line-height:1.95;border-radius:0 4px 4px 0}
+.origin b{color:var(--c-text)}
+
+/* ================= DIVISION DIAGRAM ================= */
+.dia-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.dia-side{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:0;overflow:hidden}
+.dia-top{padding:26px 28px 20px;border-top:4px solid}
+.side-partner .dia-top{border-color:var(--c-primary)}
+.side-hq .dia-top{border-color:var(--c-brown)}
+.dia-who{font-family:var(--deco);font-style:italic;font-size:13px;letter-spacing:.06em;display:flex;align-items:center;gap:9px}
+.side-partner .dia-who{color:var(--c-primary)}
+.side-hq .dia-who{color:var(--c-brown)}
+.dia-who .dot{width:9px;height:9px;border-radius:50%}
+.side-partner .dot{background:var(--c-primary)}
+.side-hq .dot{background:var(--c-brown)}
+.dia-top h3{font-size:22px;margin:8px 0 3px}
+.dia-top .rn{font-size:13px;color:var(--c-mute)}
+.role-list{padding:6px 28px 28px}
+.role-item{padding:18px 0;border-top:1px solid var(--c-border)}
+.role-item .rt{font-family:var(--serif);font-weight:700;font-size:15.5px;color:var(--c-text);display:flex;align-items:baseline;gap:9px}
+.role-item .rt .num{font-size:12px}
+.side-partner .role-item .rt .num{color:var(--c-primary)}
+.side-hq .role-item .rt .num{color:var(--c-brown)}
+.role-item .rd{font-size:13.5px;color:var(--c-sub);line-height:1.85;margin-top:6px}
+.verdict-row{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.verdict{padding:22px 26px;border-radius:6px;background:#fff;border:1px solid var(--c-border);font-size:14.5px;line-height:1.85;color:var(--c-body)}
+.verdict .vl{font-family:var(--deco);font-style:italic;font-size:13px;display:block;margin-bottom:8px}
+.verdict b{font-family:var(--serif);font-weight:700;font-size:16px;color:var(--c-text)}
+.v-partner{border-top:3px solid var(--c-primary)}
+.v-partner .vl{color:var(--c-primary)}
+.v-hq{border-top:3px solid var(--c-brown)}
+.v-hq .vl{color:var(--c-brown)}
+
+/* ================= OPS TIMELINE ================= */
+.timeline{max-width:900px}
+.tl-row{display:grid;grid-template-columns:130px 160px 1fr;gap:22px;padding:22px 0;border-top:1px solid var(--c-border)}
+.tl-row:last-child{border-bottom:1px solid var(--c-border)}
+.tl-time{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--c-text)}
+.tl-who{font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.tl-who::before{content:"";width:8px;height:8px;border-radius:50%}
+.tl-who.hq{color:var(--c-primary)}
+.tl-who.hq::before{background:var(--c-primary)}
+.tl-who.stu{color:var(--c-mute)}
+.tl-who.stu::before{background:var(--c-mute)}
+.tl-act{font-size:14.5px;color:var(--c-body);line-height:1.8}
+.tl-act small{display:block;color:var(--c-mute);font-size:12.5px;margin-top:3px}
+.ops-foot{max-width:900px;margin-top:26px;font-size:14px;color:var(--c-sub);line-height:1.9}
+.ops-foot b{color:var(--c-primary)}
+
+/* ================= BENEFITS ================= */
+.ben-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.ben-card{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:34px 32px}
+.ben-card .bn{font-family:var(--deco);font-style:italic;font-size:14px;color:var(--c-primary)}
+.ben-card h3{font-size:20px;margin:12px 0 12px;line-height:1.5}
+.ben-card p{color:var(--c-sub);font-size:14.5px;line-height:1.95}
+
+/* ================= CTA STRIP ================= */
+.cta-strip{background:#fff;border:1px solid var(--c-border);border-radius:8px;padding:40px 44px;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.cta-strip .ct{font-family:var(--serif);font-weight:700;font-size:clamp(18px,2.6vw,23px);color:var(--c-text);line-height:1.55}
+.cta-strip .cta-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* ================= SNS ================= */
+.sns-inner{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.sns-flow{display:flex;flex-direction:column}
+.sns-node{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:18px 22px;display:flex;align-items:center;gap:14px}
+.sns-node .ic{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--c-primary);border:1.5px solid var(--c-primary);border-radius:50%;width:30px;height:30px;display:grid;place-items:center;flex:none}
+.sns-node .tx{font-weight:700;font-size:15px;color:var(--c-text)}
+.sns-node .tx small{display:block;font-weight:400;color:var(--c-mute);font-size:12.5px;margin-top:2px}
+.sns-arrow{width:1px;height:22px;background:var(--c-border);margin:6px 0 6px 37px}
+.sns-final{border:1px solid #EBC9B4;background:#FDF6F1}
+.sns-final .ic{background-image:var(--grad);color:#fff;border-color:transparent}
+
+/* ================= REQUIREMENTS ================= */
+.req-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:44px}
+.req-list{list-style:none}
+.req-list li{display:flex;gap:15px;padding:19px 0;border-bottom:1px solid var(--c-border)}
+.req-list li .chk{color:var(--c-primary);font-family:var(--serif);font-weight:700;flex:none;margin-top:1px}
+.req-list li .rq{font-family:var(--serif);font-weight:700;font-size:15.5px;color:var(--c-text)}
+.req-list li .rq small{display:block;font-family:var(--sans);font-weight:400;color:var(--c-sub);font-size:13px;margin-top:5px;line-height:1.7}
+.req-aside{background:#fff;border:1px solid var(--c-border);border-radius:6px;padding:30px 30px;align-self:start}
+.req-aside h4{font-size:17px;margin-bottom:14px}
+.req-aside p{font-size:14px;color:var(--c-sub);line-height:1.95}
+.tbd{display:inline-block;color:#fff;background:var(--c-primary);font-family:var(--sans);font-size:10.5px;font-weight:700;padding:2px 8px;border-radius:3px;letter-spacing:.03em;white-space:nowrap;vertical-align:middle}
+
+/* ================= STEPS ================= */
+.step-row{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.step{padding:0 18px;border-left:1px solid var(--c-border)}
+.step:first-child{padding-left:0;border-left:0}
+.step .sn{font-family:var(--deco);font-style:italic;font-size:13px;color:var(--c-primary);font-weight:700}
+.step .sbar{width:32px;height:3px;background:var(--c-primary);margin:12px 0 16px}
+.step h4{font-size:17px;line-height:1.5;margin-bottom:9px}
+.step p{font-size:13px;color:var(--c-sub);line-height:1.8}
+
+/* ================= FAQ ================= */
+.faq-item{border-bottom:1px solid var(--c-border)}
+.faq-q{width:100%;text-align:left;background:none;border:none;cursor:pointer;padding:26px 44px 26px 0;position:relative;font-family:var(--serif);font-weight:700;font-size:17px;color:var(--c-text);line-height:1.6}
+.faq-q .mk{position:absolute;right:2px;top:26px;font-family:var(--serif);color:var(--c-primary);font-size:22px;font-weight:700;transition:transform .3s ease}
+.faq-q[aria-expanded="true"] .mk{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.faq-a .inner{padding:0 40px 28px 0;color:var(--c-sub);font-size:14.5px;line-height:2}
+
+/* ================= FINAL CTA + FORM ================= */
+.final{background:var(--c-brown);color:#F1E9DF}
+.final .sec-head{text-align:center;margin:0 auto 40px;max-width:766px}
+.final .eyebrow{color:var(--c-gold);text-align:center}
+.final .bar{margin:20px auto 22px;background:var(--c-gold)}
+.final h2{color:#fff;font-size:clamp(24px,4vw,36px);line-height:1.5}
+.final .lead{color:#E7DACB;font-size:16px;margin-top:20px;line-height:2}
+.form{max-width:680px;margin:0 auto;background:#fff;border-radius:8px;padding:42px 40px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:20px}
+.field label{display:block;font-family:var(--serif);font-size:13.5px;font-weight:700;color:var(--c-text);margin-bottom:8px}
+.field label .rq-mark{color:var(--c-primary);font-size:11px;margin-left:6px;font-family:var(--sans)}
+.field label .opt{color:var(--c-mute);font-size:11px;margin-left:6px;font-family:var(--sans);font-weight:400}
+.field input,.field select,.field textarea{width:100%;background:var(--c-grey);border:1px solid var(--c-border);border-radius:5px;padding:13px 15px;color:var(--c-text);font-family:var(--sans);font-size:15px}
+.field input::placeholder,.field textarea::placeholder{color:#9a9a9a}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--c-primary);background:#fff}
+.form .btn-primary{width:100%;margin-top:6px;font-size:16.5px;padding:19px}
+.form-note{text-align:center;font-size:11.5px;color:var(--c-mute);margin-top:16px;line-height:1.7}
+
+/* ================= FOOTER ================= */
+footer{background:#fff;color:var(--c-sub);padding:46px 0 40px;text-align:center;border-top:1px solid var(--c-border)}
+footer .brand{color:var(--c-text)}
+footer .brand em{color:var(--c-primary)}
+footer p{font-size:12.5px;margin-top:14px;line-height:1.9;color:var(--c-mute)}
+footer .fnote{font-family:var(--deco);font-style:italic;font-size:12px;color:#9a9a9a;margin-top:16px}
+
+/* ================= STICKY MOBILE CTA ================= */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;background:#fff;padding:11px 14px;border-top:1px solid var(--c-border);gap:10px;box-shadow:0 -6px 20px -12px rgba(0,0,0,.25)}
+.sticky-cta a{flex:1;text-align:center;padding:14px;font-size:14px;border-radius:5px;text-decoration:none;font-weight:700}
+.sticky-cta .s-primary{background-image:var(--grad);color:#fff}
+.sticky-cta .s-ghost{background:#fff;color:var(--c-text);border:1.5px solid var(--c-border)}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:860px){
+  section{padding:64px 0}
+  .ribbon{grid-template-columns:1fr}
+  .ribbon .item + .item{border-left:0;border-top:1px solid var(--c-border)}
+  .prob-grid{grid-template-columns:1fr;gap:14px}
+  .premium{padding:38px 26px}
+  .acronym{grid-template-columns:1fr}
+  .acr{flex-direction:row;align-items:baseline;gap:12px;padding:14px 18px}
+  .acr .aw{margin-top:0}
+  .acr .aj{margin-left:auto;text-align:right}
+  .define-body{grid-template-columns:1fr;gap:22px}
+  .dia-cols{grid-template-columns:1fr;gap:16px}
+  .verdict-row{grid-template-columns:1fr;gap:14px}
+  .tl-row{grid-template-columns:1fr;gap:5px}
+  .ben-grid{grid-template-columns:1fr}
+  .cta-strip{flex-direction:column;align-items:flex-start;padding:30px 26px}
+  .sns-inner{grid-template-columns:1fr;gap:32px}
+  .req-grid{grid-template-columns:1fr;gap:28px}
+  .step-row{grid-template-columns:1fr}
+  .step{padding:20px 0;border-left:0;border-top:1px solid var(--c-border)}
+  .step:first-child{border-top:0}
+  .form-row{grid-template-columns:1fr;gap:0}
+  .sticky-cta{display:flex}
+  body{padding-bottom:72px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 18px}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{width:100%}
+  .cta-strip .cta-btns{width:100%;flex-direction:column}
+  .cta-strip .btn{width:100%}
+  .form{padding:28px 22px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div class="brand">SALAN <em>Education</em></div>
+      <div class="hero-tag">大学受験専門塾 ガリレオ／プラトン｜認定パートナー募集</div>
+    </div>
+    <div class="hero-inner">
+      <span class="eyebrow">Certified Partner Program</span>
+      <h1>塾の<span class="o">実行</span>は、本部が持つ。<br>あなたは、生徒と向き合う<br><span class="u">塾長・教務長</span>に専念する。</h1>
+      <p class="hero-sub">集客・毎日課題の設計・配布・採点・講師——塾運営の「実行」はすべてSALAN本部の専門チームが担当。認定パートナーは現場のハンドルを握り、保護者と生徒に向き合うことに集中できます。</p>
+      <div class="hero-cta">
+        <a href="#entry" class="btn btn-primary">パートナー説明を受ける <span class="arw">→</span></a>
+        <a href="#model" class="btn btn-outline">モデルを見る</a>
+      </div>
+      <div class="hero-note">※ まずは無料のオンライン面談から。しつこい勧誘はありません。</div>
+    </div>
+    <div class="ribbon">
+      <div class="item"><span class="k">You</span><span class="v">塾長 × 教務長を兼任</span></div>
+      <div class="item"><span class="k">Head Office</span><span class="v">ディレクション／毎日課題／講師を提供</span></div>
+      <div class="item"><span class="k">Model</span><span class="v">実行を抱えず、現場を握る</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROBLEM ============ -->
+<section class="grey" id="problem">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Why this model</span>
+      <h2>教育への情熱はある。でも、<br>運営の“全部”を抱えるのは現実的ではない。</h2>
+      <hr class="bar">
+    </div>
+    <div class="prob-grid">
+      <div class="card">
+        <span class="n">01</span>
+        <h3>実行の量が多すぎる</h3>
+        <p>集客、保護者対応、課題設計、毎日の配布、採点、講師の採用と管理。一人で塾を回すと、生徒と向き合う時間が実務に消えていきます。</p>
+      </div>
+      <div class="card">
+        <span class="n">02</span>
+        <h3>集客の“型”がない</h3>
+        <p>指導力に自信はあっても、広告から面談・入塾までの導線設計は別スキル。ここでつまずくと、良い塾でも生徒が集まりません。</p>
+      </div>
+      <div class="card">
+        <span class="n">03</span>
+        <h3>独立のリスクが重い</h3>
+        <p>全レイヤーを自分で背負う開業は、採用・労務・品質のリスクを一人で抱えること。踏み出せない理由がここにあります。</p>
+      </div>
+    </div>
+    <p class="bridge">その“実行”を、<span class="u">本部の専門チームに預けられる</span>としたら。</p>
+  </div>
+</section>
+
+<!-- ============ PREMIUM DEFINITION ============ -->
+<section class="define" id="philosophy">
+  <div class="wrap">
+    <div class="premium">
+      <span class="plabel">SALAN — Student-first Advisory, Leveraged Alliance Network</span>
+      <h2>教育の主役は、いつも<span class="g">生徒</span>だ。</h2>
+      <p class="pnote">私たちは、生徒に最も近い塾長・教務長が、学習アドバイザリーという本質に集中できる場所をつくる。そのために、運営の実行は本部が引き受ける。一人で全部を抱えるのではなく、専門チームの力を“てこ”にして、パートナーは現場で生徒に向き合う。私たちは競合ではなく、連合だ。同じ理念を持つ塾長が集まり、一つのネットワークとして広がっていく。</p>
+      <div class="acronym">
+        <div class="acr"><span class="al">S</span><span class="aw">Student-first</span><span class="aj">生徒起点</span></div>
+        <div class="acr"><span class="al">A</span><span class="aw">Advisory</span><span class="aj">学習アドバイザリーに集中</span></div>
+        <div class="acr"><span class="al">L</span><span class="aw">Leveraged</span><span class="aj">実行は本部を“てこ”に</span></div>
+        <div class="acr"><span class="al">A</span><span class="aw">Alliance</span><span class="aj">競合ではなく、連合</span></div>
+        <div class="acr"><span class="al">N</span><span class="aw">Network</span><span class="aj">広がるネットワーク</span></div>
+      </div>
+    </div>
+    <div class="sec-head narrow" style="margin-top:64px;margin-bottom:0">
+      <span class="eyebrow">What is a Certified Partner</span>
+      <h2>認定パートナーとは</h2>
+      <hr class="bar">
+      <p class="lead">SALANの理念を体現し、ガリレオ／プラトンのブランドを背負って、生徒と保護者に最高品質の受験指導を届ける“現場の責任者”です。</p>
+    </div>
+    <div class="define-body">
+      <p>担うのは、生徒との関係構築、学習アドバイザリー、進路相談、そして入塾までの相談型営業。生徒と保護者が安心して通い続けられる環境をつくることが、パートナーの役割です。</p>
+      <p>日々の実行（課題設計・配布・採点・授業）は本部が担当。あなたは実務に埋もれることなく、塾長・教務長としての価値提供に集中できます。採用も労務もシフト管理も、抱える必要はありません。</p>
+      <div class="origin"><b>制度の思想：</b>品質責任者制度で知られるStockSun式のパートナーモデルを、大学受験教育に応用したものです。責任者は現場を握り、実行リソースはプラットフォーム側が供給する——この分業構造を教育に持ち込んだのが、この制度です。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIVISION DIAGRAM ============ -->
+<section class="grey" id="model">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">The structure</span>
+      <h2>役割は、はっきり分かれている。</h2>
+      <hr class="bar">
+      <p class="lead">「人と向き合う仕事」はパートナーが。「日々回し続ける実行」は本部が。境界線が明確だから、あなたは本質業務だけに集中できます。</p>
+    </div>
+    <div class="dia-cols">
+      <div class="dia-side side-partner">
+        <div class="dia-top">
+          <span class="dia-who"><span class="dot"></span>You — Partner</span>
+          <h3>認定パートナー</h3>
+          <span class="rn">生徒・保護者と向き合う、現場の顔</span>
+        </div>
+        <div class="role-list">
+          <div class="role-item">
+            <div class="rt"><span class="num">01</span>塾長（CS責任者）</div>
+            <div class="rd">インバウンド営業・保護者/生徒対応・入塾/入金・継続。安心して通い続けられる環境をつくり、LTVと継続率に責任を持つメンター。</div>
+          </div>
+          <div class="role-item">
+            <div class="rt"><span class="num">02</span>教務長／学習アドバイザー</div>
+            <div class="rd">質問対応・勉強法アドバイス・進路相談・学習設計。生徒を学習面からリードする存在。</div>
+          </div>
+        </div>
+      </div>
+      <div class="dia-side side-hq">
+        <div class="dia-top">
+          <span class="dia-who"><span class="dot"></span>SALAN — 本部</span>
+          <h3>本部（実行チーム）</h3>
+          <span class="rn">日々のオペレーションを、丸ごと担当</span>
+        </div>
+        <div class="role-list">
+          <div class="role-item">
+            <div class="rt"><span class="num">03</span>教務ディレクター</div>
+            <div class="rd">毎日課題の範囲設計・進行管理・スタッフへの指示出し。課題が滞りなく配布される状態を維持。</div>
+          </div>
+          <div class="role-item">
+            <div class="rt"><span class="num">04</span>毎日課題スタッフ</div>
+            <div class="rd">指定範囲の課題配布と丸つけ。課題出し達成率100%を目指す日次運用。</div>
+          </div>
+          <div class="role-item">
+            <div class="rt"><span class="num">05</span>講師陣</div>
+            <div class="rd">各科目の授業・質問対応・学習指導。苦手単元の解消と成績向上。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="verdict-row">
+      <div class="verdict v-partner">
+        <span class="vl">Partner holds</span>
+        <b>現場のハンドル</b>を握る。生徒・保護者との信頼、学習の方向づけ、入塾までの関係構築。
+      </div>
+      <div class="verdict v-hq">
+        <span class="vl">Head office runs</span>
+        <b>実行の全て</b>を回す。採用・教育・シフト・品質管理を、あなたが抱える必要はありません。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPS TIMELINE ============ -->
+<section class="define" id="ops">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">A day of operations</span>
+      <h2>「毎日課題」は、本部だけで1日が回る。</h2>
+      <hr class="bar">
+      <p class="lead">課題設計 → 配布 → 生徒の取り組み → 採点・返却。この日次サイクルは、すべて本部の担当が時刻連動で実行します。パートナーの手を止めません。</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-row">
+        <div class="tl-time">00:00 過ぎ</div>
+        <div class="tl-who hq">教務ディレクター</div>
+        <div class="tl-act">LINE Worksで翌日分の課題範囲を指示（ディレクション）<small>科目・教材・ページ・問題番号まで指定</small></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">翌 9:00–10:00</div>
+        <div class="tl-who hq">毎日課題スタッフ</div>
+        <div class="tl-act">指示をもとにGoogleドライブから課題を抽出し、生徒へ配布<small>抽出は10〜15分／午前中に配布完了</small></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">18:00–24:00</div>
+        <div class="tl-who stu">生徒</div>
+        <div class="tl-act">配布された課題に取り組み、提出<small>夕方〜深夜に提出</small></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-time">翌 8:00–9:00</div>
+        <div class="tl-who hq">毎日課題スタッフ</div>
+        <div class="tl-act">提出課題を採点し、LINE Worksで返却<small>1件あたり約10分</small></div>
+      </div>
+    </div>
+    <p class="ops-foot">やり取りはすべて <b>LINE Works</b> に集約。生徒の提出が深夜まで続くため、採点は翌朝にまとめて実施——という運用まで標準化済みです。パートナーが日々の課題運用に張り付く必要はありません。</p>
+  </div>
+</section>
+
+<!-- ============ BENEFITS ============ -->
+<section class="grey" id="benefits">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Why partner with us</span>
+      <h2>抱えないから、本質に集中できる。</h2>
+      <hr class="bar">
+    </div>
+    <div class="ben-grid">
+      <div class="ben-card">
+        <span class="bn">Benefit 01</span>
+        <h3>実行リソースを、抱えない</h3>
+        <p>講師・スタッフの採用、教育、労務、シフト管理から解放。本部の専門チームがオペレーションを回すので、あなたは「人を管理する塾長」ではなく「生徒と向き合う塾長」でいられます。</p>
+      </div>
+      <div class="ben-card">
+        <span class="bn">Benefit 02</span>
+        <h3>集客の“勝ち筋”が提供される</h3>
+        <p>Meta広告 → LP → LINE登録＋無料診断 → 3日間ナーチャリング → 面談 → 体験授業 → クロージング。実証済みのインバウンド営業の型を、そのまま使えます。</p>
+      </div>
+      <div class="ben-card">
+        <span class="bn">Benefit 03</span>
+        <h3>オペレーションは整備済み</h3>
+        <p>毎日課題の1日の時間割、エスカレーションルール、保護者報告、経理連携フローまで標準マニュアル化。ゼロから仕組みを作る必要はありません。</p>
+      </div>
+      <div class="ben-card">
+        <span class="bn">Benefit 04</span>
+        <h3>発信が、そのまま資産になる</h3>
+        <p>あなたのSNS発信が公式アカウントと常時紐付き、塾の認知拡散を最大化。同時に、パートナー自身のブランディングにもつながります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA STRIP ============ -->
+<section class="define" id="cta" style="padding:56px 0">
+  <div class="wrap">
+    <div class="cta-strip">
+      <div class="ct">“実行を抱えない塾長”という<br>働き方を、詳しく聞いてみませんか。</div>
+      <div class="cta-btns">
+        <a href="#entry" class="btn btn-primary">無料面談を申し込む <span class="arw">→</span></a>
+        <a href="#entry" class="btn btn-outline">制度資料をダウンロード</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SNS ============ -->
+<section class="grey" id="sns">
+  <div class="wrap">
+    <div class="sns-inner">
+      <div>
+        <span class="eyebrow">Amplification</span>
+        <h2 style="font-size:clamp(23px,3.4vw,30px);line-height:1.5">パートナーの発信 ×<br>公式アカウント連携で、<br>認知を最大化する。</h2>
+        <hr class="bar">
+        <p style="color:var(--c-sub);font-size:15.5px;line-height:2">認定パートナーには、SNSでの情報発信も担っていただきます。あなたの発信は公式アカウントと常時紐付けられ、個人の信頼と塾ブランドの認知が相互に増幅。広告だけに頼らない、継続的な認知拡散の仕組みが生まれます。</p>
+      </div>
+      <div class="sns-flow">
+        <div class="sns-node"><span class="ic">1</span><div class="tx">パートナーがSNSで発信<small>受験ノウハウ・指導の様子・実績</small></div></div>
+        <div class="sns-arrow"></div>
+        <div class="sns-node"><span class="ic">2</span><div class="tx">公式アカウントと常時紐付け<small>個人発信と塾ブランドが連動</small></div></div>
+        <div class="sns-arrow"></div>
+        <div class="sns-node sns-final"><span class="ic">3</span><div class="tx">認知拡散力を最大化<small>広告に依存しない集客基盤＋個人ブランディング</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REQUIREMENTS ============ -->
+<section class="define" id="requirements">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Who we're looking for</span>
+      <h2>求める人物像</h2>
+      <hr class="bar">
+      <p class="lead">対象は、塾長と教務長を兼任できる方。生徒・保護者に向き合う姿勢と、学習をリードできる指導力の両方をお持ちの方を募集します。</p>
+    </div>
+    <div class="req-grid">
+      <ul class="req-list">
+        <li><span class="chk">✓</span><span class="rq">塾長・教務長を兼任できる<small>保護者/生徒対応（CS）と、学習アドバイザリーの両方を担える方</small></span></li>
+        <li><span class="chk">✓</span><span class="rq">大学受験指導の知見がある<small>理系・文系いずれかの受験指導経験。指導者・講師・塾運営いずれの経験も歓迎 <span class="tbd">要確認：実績要件</span></small></span></li>
+        <li><span class="chk">✓</span><span class="rq">生徒の成果にオーナーシップを持てる<small>「この生徒を前に進めるために何をすべきか」を自ら考え行動できる方</small></span></li>
+        <li><span class="chk">✓</span><span class="rq">SNSでの発信に前向き<small>自身の発信を、塾ブランドと自分のキャリアの資産にできる方</small></span></li>
+      </ul>
+      <aside class="req-aside">
+        <h4>こんな方に向いています</h4>
+        <p>・独立・開業を考えているが、全実行を一人で抱えるのは避けたい方<br>・指導や生徒対応が好きで、そこに時間を使いたい方<br>・実証済みの集客・運用の仕組みの上で、自分の塾を持ちたい方<br><br>現時点で要件を満たさない場合でも、協業を重ねながら認定を目指すキャリアパスをご用意する想定です。<span class="tbd">要確認</span></p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STEPS ============ -->
+<section class="grey" id="steps">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">Path to partnership</span>
+      <h2>参画までの流れ</h2>
+      <hr class="bar">
+      <p class="lead">いきなり認定するのではなく、協業を通じて相互理解と信頼を重ねてから参画いただく設計です。<span class="tbd">要確認：正式ステップ</span></p>
+    </div>
+    <div class="step-row">
+      <div class="step"><span class="sn">Step 01</span><div class="sbar"></div><h4>応募・面談</h4><p>フォームからエントリー。オンラインでモデルの説明と相互のすり合わせを行います。</p></div>
+      <div class="step"><span class="sn">Step 02</span><div class="sbar"></div><h4>モデル理解</h4><p>分業構造・収益設計・運用体制を詳しくご説明し、疑問を解消します。</p></div>
+      <div class="step"><span class="sn">Step 03</span><div class="sbar"></div><h4>協業・トライアル</h4><p>実際の運用に触れながら、本部チームとの連携と品質を確認します。</p></div>
+      <div class="step"><span class="sn">Step 04</span><div class="sbar"></div><h4>認定パートナー参画</h4><p>相互合意のうえで正式に認定。ブランドを背負う責任者となります。</p></div>
+      <div class="step"><span class="sn">Step 05</span><div class="sbar"></div><h4>開校・運用</h4><p>集客の型と本部の実行チームを稼働させ、塾の運営を開始します。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="define" id="faq">
+  <div class="wrap">
+    <div class="sec-head narrow">
+      <span class="eyebrow">FAQ</span>
+      <h2>よくあるご質問</h2>
+      <hr class="bar">
+    </div>
+    <div class="narrow" style="margin:0 auto">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">収益モデルはどうなっていますか？<span class="mk">+</span></button>
+        <div class="faq-a"><div class="inner">【要確認】ロイヤリティ／粗利シェア／管理運営費など、収益設計の具体はこちらに記載します。参考として、応用元となったStockSun式のモデルでは、クライアント負担を増やす“中抜き”は行わず、プロジェクトの粗利から必要最低限の管理運営費（営業関連費・品質管理・経理法務サポート・ナレッジアクセス権など）を徴収する形をとっています。ガリレオ／プラトンでの正式な条件は面談時にご案内します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">本部の実行チームの品質は担保されますか？<span class="mk">+</span></button>
+        <div class="faq-a"><div class="inner">課題設計から採点・返却までの日次オペレーション、エスカレーションルール、保護者報告フローが標準マニュアル化されています。指標（課題出し達成率・丸つけ実施率・返信遅延件数など）で品質を可視化し、運用改善のルールも定めています。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">塾の運営やFCが未経験でも参画できますか？<span class="mk">+</span></button>
+        <div class="faq-a"><div class="inner">求めるのは、塾長・教務長として生徒・保護者に向き合える方です。運営の“実行”は本部が担うため、指導・生徒対応の経験を軸にご検討いただけます。要件の詳細は面談でご確認ください。<span class="tbd">要確認</span></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">対応エリアや、オンライン/対面の別は？<span class="mk">+</span></button>
+        <div class="faq-a"><div class="inner">【要確認】オンライン中心か、地域拠点型かによって対象エリアが変わります。運用ツール（LINE Works・Googleドライブ等）はオンライン前提で整備されています。正式な対応範囲はこちらに記載します。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA + FORM ============ -->
+<section class="final" id="entry">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Entry</span>
+      <h2>“実行を抱えない塾長”という<br>選択肢を、話してみませんか。</h2>
+      <hr class="bar">
+      <p class="lead">まずは無料のオンライン面談から。モデルの詳細・収益設計・運用体制を、あなたの状況に合わせてご説明します。</p>
+    </div>
+    <form class="form" onsubmit="return handleSubmit(event)">
+      <div class="form-row">
+        <div class="field"><label>お名前 <span class="rq-mark">必須</span></label><input type="text" name="name" placeholder="山田 太郎" required></div>
+        <div class="field"><label>メールアドレス <span class="rq-mark">必須</span></label><input type="email" name="email" placeholder="you@example.com" required></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label>電話番号 <span class="opt">任意</span></label><input type="tel" name="tel" placeholder="090-0000-0000"></div>
+        <div class="field"><label>現在のご状況 <span class="opt">任意</span></label>
+          <select name="status">
+            <option value="">選択してください</option>
+            <option>会社員で独立を考えている</option>
+            <option>会社員で転職を考えている</option>
+            <option>すでに塾・教育事業を運営している</option>
+            <option>フリーランス／個人で指導している</option>
+            <option>その他</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label>受験指導・塾運営のご経歴 <span class="rq-mark">必須</span></label><textarea name="career" rows="4" placeholder="指導科目・指導歴・運営経験など" required></textarea></div>
+      <button type="submit" class="btn btn-primary">無料面談を申し込む <span class="arw">→</span></button>
+      <p class="form-note">※ 送信先は未設定です【要設定：GAS等のフォームエンドポイント】／個人情報はプライバシーポリシーに基づき取り扱います。</p>
+    </form>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="wrap">
+    <div class="brand">SALAN <em>Education</em></div>
+    <p>SALAN — Student-first Advisory, Leveraged Alliance Network<br>大学受験専門塾 ガリレオ／プラトン 認定パートナープログラム ｜ 運営会社：<span class="tbd">要確認</span></p>
+    <p class="fnote">© 2026 SALAN Education — Certified Partner Program (draft)</p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <a href="#model" class="s-ghost">モデルを見る</a>
+  <a href="#entry" class="s-primary">面談を申し込む</a>
+</div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click', function(){
+    var open = q.getAttribute('aria-expanded') === 'true';
+    var ans = q.nextElementSibling;
+    q.setAttribute('aria-expanded', String(!open));
+    ans.style.maxHeight = open ? null : (ans.querySelector('.inner').offsetHeight + 'px');
+  });
+});
+function handleSubmit(e){
+  e.preventDefault();
+  alert('【デモ】送信先が未設定です。GAS等のフォームエンドポイントを設定すると実送信されます。');
+  return false;
+}
+</script>
+</body>
+</html>

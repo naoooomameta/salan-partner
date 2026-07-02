@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>LP Editor</title>
+<style>
+  :root { --bg:#1e1f24; --panel:#26272e; --line:#3a3b44; --text:#e8e8ec; --sub:#9a9ba6; --accent:#4f8cff; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"Hiragino Sans",sans-serif; background:var(--bg); color:var(--text); height:100vh; display:flex; flex-direction:column; overflow:hidden; }
+
+  header { height:48px; display:flex; align-items:center; gap:12px; padding:0 16px; background:var(--panel); border-bottom:1px solid var(--line); flex-shrink:0; }
+  header h1 { font-size:14px; font-weight:600; }
+  header .spacer { flex:1; }
+  .btn { border:1px solid var(--line); background:transparent; color:var(--text); border-radius:6px; padding:6px 14px; font-size:12px; cursor:pointer; }
+  .btn:hover { border-color:var(--accent); }
+  .btn.primary { background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600; }
+  #status { font-size:12px; color:var(--sub); min-width:120px; text-align:right; }
+
+  main { flex:1; display:flex; min-height:0; }
+  aside { width:220px; background:var(--panel); border-right:1px solid var(--line); overflow-y:auto; padding:12px; flex-shrink:0; }
+  aside h2, #props h2 { font-size:11px; color:var(--sub); letter-spacing:.08em; margin-bottom:10px; }
+  .sec-item { display:flex; align-items:center; gap:6px; padding:8px 10px; border-radius:6px; font-size:12px; cursor:pointer; margin-bottom:4px; border:1px solid transparent; }
+  .sec-item:hover { background:rgba(255,255,255,.05); }
+  .sec-item.active { border-color:var(--accent); background:rgba(79,140,255,.12); }
+  .sec-item .label { flex:1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .sec-item .ops { display:none; gap:2px; }
+  .sec-item:hover .ops { display:flex; }
+  .sec-item .ops button { background:none; border:none; color:var(--sub); cursor:pointer; font-size:12px; padding:2px; }
+  .sec-item .ops button:hover { color:var(--text); }
+
+  #stage { flex:1; display:flex; flex-direction:column; min-width:0; background:#0f1013; }
+  #viewbar { height:36px; display:flex; align-items:center; justify-content:center; gap:8px; flex-shrink:0; }
+  .vbtn { font-size:11px; color:var(--sub); background:none; border:1px solid var(--line); border-radius:4px; padding:3px 10px; cursor:pointer; }
+  .vbtn.on { color:#fff; border-color:var(--accent); background:rgba(79,140,255,.15); }
+  #frameWrap { flex:1; display:flex; justify-content:center; overflow:auto; padding:0 0 16px; }
+  iframe { border:none; background:#fff; width:100%; height:100%; transition:width .2s; box-shadow:0 0 24px rgba(0,0,0,.5); }
+  iframe.sp { width:390px; }
+
+  #props { width:260px; background:var(--panel); border-left:1px solid var(--line); overflow-y:auto; padding:12px; flex-shrink:0; }
+  #props .empty { font-size:12px; color:var(--sub); line-height:1.7; }
+  .field { margin-bottom:12px; }
+  .field label { display:block; font-size:11px; color:var(--sub); margin-bottom:4px; }
+  .field input[type=range] { width:100%; }
+  .field input[type=text], .field input[type=color], .field select { width:100%; background:var(--bg); border:1px solid var(--line); color:var(--text); border-radius:4px; padding:5px 8px; font-size:12px; }
+  .field input[type=color] { height:32px; padding:2px; }
+  .field .val { font-size:11px; color:var(--accent); float:right; }
+  .hint { font-size:11px; color:var(--sub); line-height:1.6; border-top:1px solid var(--line); padding-top:10px; margin-top:14px; }
+  #tagname { font-size:12px; color:var(--accent); margin-bottom:10px; font-family:monospace; }
+</style>
+</head>
+<body>
+<header>
+  <h1>LP Editor</h1>
+  <span style="font-size:11px;color:var(--sub)">クリックで選択 / ダブルクリックで文字編集</span>
+  <div class="spacer"></div>
+  <span id="status"></span>
+  <button class="btn" id="reloadBtn">再読込</button>
+  <button class="btn primary" id="saveBtn">保存 (⌘S)</button>
+</header>
+<main>
+  <aside>
+    <h2>セクション</h2>
+    <div id="secList"></div>
+  </aside>
+  <div id="stage">
+    <div id="viewbar">
+      <button class="vbtn on" data-w="pc">PC</button>
+      <button class="vbtn" data-w="sp">スマホ390px</button>
+    </div>
+    <div id="frameWrap"><iframe id="frame" src="/lp"></iframe></div>
+  </div>
+  <div id="props">
+    <h2>プロパティ</h2>
+    <div id="propBody"><div class="empty">プレビュー内の要素をクリックすると、ここで文字サイズ・色・余白を調整できます。<br><br>文字の書き換えはダブルクリック。</div></div>
+  </div>
+</main>
+
+<script>
+const frame = document.getElementById('frame');
+const statusEl = document.getElementById('status');
+let doc = null, selected = null;
+
+const setStatus = (t, ok) => { statusEl.textContent = t; statusEl.style.color = ok ? '#6fd388' : 'var(--sub)'; if (t) setTimeout(()=>{ if(statusEl.textContent===t) statusEl.textContent=''; }, 2500); };
+
+frame.addEventListener('load', () => {
+  doc = frame.contentDocument;
+  injectEditorStyle();
+  bindFrameEvents();
+  buildSectionList();
+});
+
+function injectEditorStyle() {
+  const s = doc.createElement('style');
+  s.id = '__lpe_style';
+  s.textContent = `
+    .__lpe_hover { outline:1.5px dashed #4f8cff !important; outline-offset:-1.5px; cursor:default; }
+    .__lpe_selected { outline:2px solid #4f8cff !important; outline-offset:-2px; }
+    [contenteditable="true"] { outline:2px solid #f5a623 !important; }
+  `;
+  doc.head.appendChild(s);
+}
+
+function bindFrameEvents() {
+  let hoverEl = null;
+  doc.body.addEventListener('mouseover', (e) => {
+    if (e.target === doc.body || e.target.isContentEditable) return;
+    hoverEl && hoverEl.classList.remove('__lpe_hover');
+    hoverEl = e.target; hoverEl.classList.add('__lpe_hover');
+  });
+  doc.body.addEventListener('mouseout', () => { hoverEl && hoverEl.classList.remove('__lpe_hover'); hoverEl = null; });
+
+  doc.body.addEventListener('click', (e) => {
+    if (e.target.isContentEditable) return;
+    e.preventDefault(); e.stopPropagation();
+    select(e.target);
+  }, true);
+
+  doc.body.addEventListener('dblclick', (e) => {
+    e.preventDefault(); e.stopPropagation();
+    const el = e.target;
+    el.setAttribute('contenteditable', 'true');
+    el.focus();
+    const done = () => { el.removeAttribute('contenteditable'); el.removeEventListener('blur', done); };
+    el.addEventListener('blur', done);
+  }, true);
+
+  // ⌘S / Ctrl+S で保存(親・iframe両方)
+  const onKey = (e) => { if ((e.metaKey || e.ctrlKey) && e.key === 's') { e.preventDefault(); save(); } };
+  doc.addEventListener('keydown', onKey);
+  document.addEventListener('keydown', onKey);
+}
+
+function select(el) {
+  if (selected) selected.classList.remove('__lpe_selected');
+  selected = el;
+  selected.classList.add('__lpe_selected');
+  renderProps();
+}
+
+/* ---------- 右パネル ---------- */
+function renderProps() {
+  const cs = frame.contentWindow.getComputedStyle(selected);
+  const body = document.getElementById('propBody');
+  body.innerHTML = `
+    <div id="tagname">&lt;${selected.tagName.toLowerCase()}&gt;${selected.className && typeof selected.className === 'string' ? ' .' + selected.className.split(' ').filter(c=>!c.startsWith('__lpe'))[0] : ''}</div>
+    ${rangeField('フォントサイズ', 'fontSize', parseInt(cs.fontSize), 8, 96, 'px')}
+    ${rangeField('行間', 'lineHeight', Math.round(parseFloat(cs.lineHeight) / parseFloat(cs.fontSize) * 100) / 100 || 1.6, 1, 3, '', 0.05)}
+    ${colorField('文字色', 'color', rgb2hex(cs.color))}
+    ${colorField('背景色', 'backgroundColor', rgb2hex(cs.backgroundColor))}
+    ${rangeField('上余白', 'paddingTop', parseInt(cs.paddingTop), 0, 200, 'px')}
+    ${rangeField('下余白', 'paddingBottom', parseInt(cs.paddingBottom), 0, 200, 'px')}
+    ${rangeField('左右余白', 'paddingLR', parseInt(cs.paddingLeft), 0, 120, 'px')}
+    ${rangeField('外余白(上)', 'marginTop', parseInt(cs.marginTop) || 0, 0, 200, 'px')}
+    <div class="field"><label>文字揃え</label>
+      <select data-prop="textAlign">
+        ${['left','center','right'].map(v=>`<option value="${v}" ${cs.textAlign===v?'selected':''}>${{left:'左',center:'中央',right:'右'}[v]}</option>`).join('')}
+      </select></div>
+    <div class="field"><label>太さ</label>
+      <select data-prop="fontWeight">
+        ${[['400','標準'],['600','やや太'],['700','太字'],['900','極太']].map(([v,l])=>`<option value="${v}" ${cs.fontWeight===v?'selected':''}>${l}</option>`).join('')}
+      </select></div>
+    <div class="hint">変更は即プレビュー反映。「保存」で index.html に書き戻されます(自動バックアップあり)。</div>
+  `;
+  body.querySelectorAll('input,select').forEach((inp) => {
+    inp.addEventListener('input', () => applyProp(inp));
+  });
+}
+
+function rangeField(label, prop, val, min, max, unit, step) {
+  return `<div class="field"><label>${label}<span class="val" id="v_${prop}">${val}${unit}</span></label>
+    <input type="range" data-prop="${prop}" data-unit="${unit}" min="${min}" max="${max}" step="${step||1}" value="${val}"></div>`;
+}
+function colorField(label, prop, val) {
+  return `<div class="field"><label>${label}</label><input type="color" data-prop="${prop}" value="${val}"></div>`;
+}
+
+function applyProp(inp) {
+  const prop = inp.dataset.prop, unit = inp.dataset.unit || '';
+  const v = inp.value + unit;
+  if (prop === 'paddingLR') { selected.style.paddingLeft = v; selected.style.paddingRight = v; }
+  else selected.style[prop] = v;
+  const valEl = document.getElementById('v_' + prop);
+  if (valEl) valEl.textContent = v;
+}
+
+function rgb2hex(rgb) {
+  const m = rgb.match(/\d+/g);
+  if (!m) return '#000000';
+  return '#' + m.slice(0,3).map(n => (+n).toString(16).padStart(2,'0')).join('');
+}
+
+/* ---------- 左パネル: セクション ---------- */
+function buildSectionList() {
+  const list = document.getElementById('secList');
+  list.innerHTML = '';
+  const secs = [...doc.body.children].filter(el => !['SCRIPT','STYLE','LINK','NOSCRIPT'].includes(el.tagName));
+  secs.forEach((sec, i) => {
+    const name = sec.id || sec.getAttribute('aria-label') ||
+      (sec.querySelector('h1,h2,h3')?.textContent.trim().slice(0,14)) ||
+      sec.tagName.toLowerCase() + ' ' + (i+1);
+    const item = document.createElement('div');
+    item.className = 'sec-item';
+    item.innerHTML = `<span class="label">${name}</span>
+      <span class="ops">
+        <button title="上へ" data-op="up">↑</button>
+        <button title="下へ" data-op="down">↓</button>
+        <button title="複製" data-op="dup">⧉</button>
+        <button title="削除" data-op="del">✕</button>
+      </span>`;
+    item.querySelector('.label').onclick = () => {
+      sec.scrollIntoView({ behavior:'smooth' });
+      select(sec);
+      [...list.children].forEach(c=>c.classList.remove('active'));
+      item.classList.add('active');
+    };
+    item.querySelectorAll('[data-op]').forEach(btn => {
+      btn.onclick = (e) => {
+        e.stopPropagation();
+        const op = btn.dataset.op;
+        if (op === 'up' && sec.previousElementSibling) sec.parentNode.insertBefore(sec, sec.previousElementSibling);
+        if (op === 'down' && sec.nextElementSibling) sec.parentNode.insertBefore(sec.nextElementSibling, sec);
+        if (op === 'dup') sec.parentNode.insertBefore(sec.cloneNode(true), sec.nextSibling);
+        if (op === 'del' && confirm(`「${name}」を削除しますか？`)) sec.remove();
+        buildSectionList();
+      };
+    });
+    list.appendChild(item);
+  });
+}
+
+/* ---------- 保存 ---------- */
+async function save() {
+  if (!doc) return;
+  const clone = doc.documentElement.cloneNode(true);
+  // エディタ由来の痕跡を除去
+  clone.querySelector('#__lpe_style')?.remove();
+  clone.querySelectorAll('.__lpe_hover,.__lpe_selected').forEach(el => {
+    el.classList.remove('__lpe_hover','__lpe_selected');
+    if (!el.getAttribute('class')) el.removeAttribute('class');
+  });
+  clone.querySelectorAll('[contenteditable]').forEach(el => el.removeAttribute('contenteditable'));
+  const html = '<!DOCTYPE html>\n' + clone.outerHTML;
+  setStatus('保存中…');
+  try {
+    const r = await fetch('/save', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ html }) });
+    const j = await r.json();
+    setStatus(j.ok ? '✓ 保存しました' : '保存失敗: ' + j.error, j.ok);
+  } catch (e) { setStatus('保存失敗: ' + e, false); }
+}
+
+document.getElementById('saveBtn').onclick = save;
+document.getElementById('reloadBtn').onclick = () => { if(confirm('未保存の変更は消えます。再読込しますか？')) frame.src = '/lp?' + Date.now(); };
+document.querySelectorAll('.vbtn').forEach(b => b.onclick = () => {
+  document.querySelectorAll('.vbtn').forEach(x=>x.classList.remove('on'));
+  b.classList.add('on');
+  frame.classList.toggle('sp', b.dataset.w === 'sp');
+});
+</script>
+</body>
+</html>

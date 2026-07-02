@@ -1,0 +1,10 @@
+# lp-editor 自動バックアップ
+index.backup-*.html
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# node（依存ゼロだが念のため）
+node_modules/
