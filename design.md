@@ -118,7 +118,7 @@ background-image: linear-gradient(-61deg, #DB521F 50%, #A63E17 0);
 
 ### パートナー向け詳細ページ（To B）
 - **program.html** — 制度詳細：職務範囲・認定基準・品質ガイドライン・認定プロセス
-- **support.html** — 本部サポート体制：実行チーム・集客ファネル・日次運用・品質指標・ツール
+- **support.html** — 本部サポート体制：運営チーム・集客ファネル・日次運用・品質指標・ツール
 - **economics.html** — 収益モデルの考え方：設計方針・収益構造・レバー・面談での開示項目
 
 各詳細ページは共通の `site-head`（brand＋nav）／パンくず／`page-hero`／CTAストリップ／footer を持つ。
